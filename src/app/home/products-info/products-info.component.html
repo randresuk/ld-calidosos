@@ -1,0 +1,46 @@
+<div class="home">
+  <div class="header">
+    <p>{{basicData.fullName}}</p>
+
+    <div class="box-info">
+      <p>usuario: {{basicData.username}}</p>
+      <p>CC: {{basicData.IdentificationId}}</p>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="left">
+      <button (click)="scroll(1)" *ngIf="setSlides < slides.length">
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="card" *ngFor="let slide of slides.slice(start, start + setSlides)" [ngStyle]="slide"
+      (click)="addItem(slide)">
+      <p>{{ slide.productName }}</p>
+      <p>{{ slide.id }}</p>
+      <p>Fecha de expiración: {{ slide.expirationDate }}</p>
+    </div>
+
+    <div class="right">
+      <button (click)="scroll(-1)" *ngIf="start > 0">
+        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <img src="../../../assets/images/adl.webp">
+</div>
+
+<!-- <div class="bill">
+  <h3>You chose:</h3>
+  <ol>
+    <li *ngFor="let product of products; let i = index">
+      {{product}}
+      <span (click)="removeItem(i)">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </span>
+    </li>
+  </ol>
+</div> -->

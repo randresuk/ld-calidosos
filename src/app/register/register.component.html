@@ -1,0 +1,35 @@
+<div class="box">
+  <form class="custom-form" method="post">
+    <h1>Register</h1>
+    <input
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Email"
+      required="required"
+    />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      placeholder="Contraseña"
+      required="required"
+    />
+    <input
+      type="password"
+      [(ngModel)]="confirmPassword"
+      name="password"
+      placeholder="Repita su contraseña"
+      required="required"
+    />
+    <input
+      type="number"
+      [(ngModel)]="phone"
+      name="phone"
+      placeholder="Ingrese su número de teléfono"
+      required="required"
+    />
+    <button type="submit" (click)="register()">Registrar</button>
+    <button type="submit" (click)="return()" style="margin-top:8PX;">Regresar</button>
+  </form>
+</div>

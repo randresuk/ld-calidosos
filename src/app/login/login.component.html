@@ -1,0 +1,22 @@
+
+<div class="box">
+  <form class="login-form">
+    <img src="../../../assets/images/adl.webp">
+    <input
+    type="text"
+    [(ngModel)]="name"
+    name="name"
+    placeholder="Usuario"
+    required="required"
+    />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      placeholder="Contraseña"
+      required="required"
+    />
+    <button type="submit" name="Login" value="Login" (click)="login()">Log in</button>
+    <button type="menu" name="Register" value="Register" (click)="register()">Registrar</button>
+  </form>
+</div>

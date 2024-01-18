@@ -1,0 +1,14 @@
+<div class="box">
+    <form class="custom-form" method="post">
+      <h3>Ingresa el número de otp enviado a tu número de celular</h3>
+      <input
+        type="email"
+        [(ngModel)]="otpValue"
+        name="email"
+        placeholder="Email"
+        required="required"
+      />
+      <button type="submit" (click)="validate()">Validar</button>
+    </form>
+  </div>
+  
